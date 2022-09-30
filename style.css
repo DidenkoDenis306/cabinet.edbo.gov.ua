@@ -1,0 +1,245 @@
+/* Указываем box sizing */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Убираем внутренние отступы */
+ul[class],
+ol[class] {
+  padding: 0;
+}
+
+/* Убираем внешние отступы */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Выставляем основные настройки по-умолчанию для body */
+body {
+  min-height: 100vh;
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* Удаляем стандартную стилизацию для всех ul и il, у которых есть атрибут class*/
+ul[class],
+ol[class] {
+  list-style: none;
+}
+
+/* Элементы a, у которых нет класса, сбрасываем до дефолтных стилей */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Упрощаем работу с изображениями */
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* Указываем понятную периодичность в потоке данных у article*/
+article > * + * {
+  margin-top: 1em;
+}
+
+/* Наследуем шрифты для инпутов и кнопок */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Удаляем все анимации и переходы для людей, которые предпочитай их не использовать */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+.header {
+  width: 100%;
+  height: 64px;
+  background-color: rgb(70, 130, 180);
+  display: flex;
+}
+
+.title {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin: 0px;
+  padding-top: 0px;
+  letter-spacing: 0px;
+  font-size: 1.5em;
+  font-weight: 400;
+  color: rgb(255, 255, 255);
+  height: 64px;
+  line-height: 64px;
+  flex: 1 1 0%;
+  font-family: sans-serif;
+}
+
+.burger {
+  width: 64px;
+}
+
+.cab {
+  width: 82%;
+}
+
+.mail {
+  width: 194px;
+}
+
+.mail p {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin: 0px;
+  padding-top: 0px;
+  letter-spacing: 0px;
+  font-size: 16px;
+  font-weight: 500;
+  color: rgb(255, 255, 255);
+  height: 64px;
+  line-height: 64px;
+  flex: 1 1 0%;
+  font-family: sans-serif;
+}
+
+.main {
+  display: flex;
+  min-height: calc(100vh - 64px - 3em);
+}
+
+.list {
+  width: 550px;
+  position: relative;
+}
+
+.sp {
+  margin-top: 20px;
+  padding: 0 20px;
+}
+
+.list span {
+  padding-left: 0.5em;
+  user-select: none;
+  font: 700 1.1em/1.2 Roboto, sans-serif;
+  cursor: pointer;
+  color: black;
+  font-size: 18px;
+}
+
+.content {
+  background-color: #f8f8f8;
+  width: 87%;
+  padding: 48px 20px;
+  font-size: 16px;
+  font-family: sans-serif;
+  box-shadow: -3px -0px 4px rgba(0, 0, 0, 0.3);
+}
+
+.content p {
+  font: 500 1.2em/1.4 Roboto, sans-serif;
+  padding-left: 1.2em;
+}
+
+.ring {
+  padding: 20px;
+}
+
+.leave {
+  padding-top: 20px;
+}
+
+.footer {
+  height: 3em;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding-left: 10px;
+  background-color: #e4e4e4;
+}
+
+.shad {
+  position: absolute;
+  width: 15%;
+}
+
+.scroll-info {
+  margin-top: 20px;
+  width: 100%;
+  height: 100px;
+  overflow-x: scroll;
+  white-space: nowrap;
+  font-size: 14px;
+}
+
+.br td {
+  border: 1px solid #e0e0e0;
+}
+
+.blue {
+  background-color: rgba(127, 221, 233, 0.4);
+  color: #676767;
+}
+
+.do {
+  align-items: center;
+  font: 600 1em/1.2 Roboto, sans-serif;
+  white-space: nowrap;
+  color: #075b7f;
+  height: auto;
+  margin-top: 30px;
+  margin-left: 20px;
+}
+
+.all {
+    font-size: 1.2em;
+    line-height: 27px;
+    color: #2f4f4f;
+    padding-right: 1em;
+    font-family: Roboto,sans-serif;
+    display: flex;
+    justify-content: end;
+}
+
+.alert {
+    font: 18px;
+    padding-left: 1.2em;
+    color: green;
+    font-weight: 900;
+    margin-top: 40px;
+}
+
+.spis {
+    list-style: decimal;
+    font: 16px;
+    padding-left: 1.2em;
+    color: green;
+}
+
+.ll {
+    margin-top: 25px;
+}
